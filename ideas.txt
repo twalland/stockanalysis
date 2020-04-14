@@ -6,3 +6,6 @@
   - stocks.py to update/backfill stock data and normalize to target currency (EUR) based on existing Forex data
     (query Forex table instead of calling API to not run into rate-limiting issues)
   - portfolio.py to update/backfill the portfolio based on the config
+(3) Create better code structure for stocks to add additional indicators easily (e.g. via a new function inside an extensible for-loop)
+(4) Add ATR indikator as a new metric and backfill for existing data
+(5) Create test MySQL tables to try things out before applying the logic to the production tables
