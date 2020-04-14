@@ -18,7 +18,7 @@ conn = pymysql.connect(
 
 #dates = []
 dates = [str(datetime.date.today() - datetime.timedelta(days=1))] # Running for yesterday (default case)
-#dates = ['2020-03-25', '2020-03-26', '2020-03-27'] # Manual backfill for specific dates
+#dates = ['2020-04-10'] # Manual backfill for specific dates
 
 #for i in range(7, 30): # Backfilling a range of dates
 #  dates.append(str(datetime.date.today() - datetime.timedelta(days=i)))
