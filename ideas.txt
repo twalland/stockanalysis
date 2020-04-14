@@ -1,0 +1,8 @@
+(1) Move stock config from the Python file into a separate database table and support a multi-user setup
+  (e.g. use a user_id to separate between entries)
+(2) Split up stocks.py into 3 different files: 
+  - (1) is a precondition for this requirement, since the user profile has to be used across the files
+  - forex.py to update/backfill Forex data (has to run first in the sequence)
+  - stocks.py to update/backfill stock data and normalize to target currency (EUR) based on existing Forex data
+    (query Forex table instead of calling API to not run into rate-limiting issues)
+  - portfolio.py to update/backfill the portfolio based on the config
